@@ -1,14 +1,16 @@
 package Lock::Socket::Mo;
 
-BEGIN {
 #<<< Do not perltidy this
-# use Mo qw'build builder default import required';
+BEGIN {
+# use Mo qw'builder default import required';
 #   The following line of code was produced from the previous line by
 #   Mo::Inline version 0.39
-no warnings;my$M=__PACKAGE__.'::';*{$M.Object::new}=sub{my$c=shift;my$s=bless{@_},$c;my%n=%{$c.::.':E'};map{$s->{$_}=$n{$_}->()if!exists$s->{$_}}keys%n;$s};*{$M.import}=sub{import warnings;$^H|=1538;my($P,%e,%o)=caller.'::';shift;eval"no Mo::$_",&{$M.$_.::e}($P,\%e,\%o,\@_)for@_;return if$e{M};%e=(extends,sub{eval"no $_[0]()";@{$P.ISA}=$_[0]},has,sub{my$n=shift;my$m=sub{$#_?$_[0]{$n}=$_[1]:$_[0]{$n}};@_=(default,@_)if!($#_%2);$m=$o{$_}->($m,$n,@_)for sort keys%o;*{$P.$n}=$m},%e,);*{$P.$_}=$e{$_}for keys%e;@{$P.ISA}=$M.Object};*{$M.'build::e'}=sub{my($P,$e)=@_;$e->{new}=sub{$c=shift;my$s=&{$M.Object::new}($c,@_);my@B;do{@B=($c.::BUILD,@B)}while($c)=@{$c.::ISA};exists&$_&&&$_($s)for@B;$s}};*{$M.'builder::e'}=sub{my($P,$e,$o)=@_;$o->{builder}=sub{my($m,$n,%a)=@_;my$b=$a{builder}or return$m;my$i=exists$a{lazy}?$a{lazy}:!${$P.':N'};$i or ${$P.':E'}{$n}=\&{$P.$b}and return$m;sub{$#_?$m->(@_):!exists$_[0]{$n}?$_[0]{$n}=$_[0]->$b:$m->(@_)}}};*{$M.'default::e'}=sub{my($P,$e,$o)=@_;$o->{default}=sub{my($m,$n,%a)=@_;exists$a{default}or return$m;my($d,$r)=$a{default};my$g='HASH'eq($r=ref$d)?sub{+{%$d}}:'ARRAY'eq$r?sub{[@$d]}:'CODE'eq$r?$d:sub{$d};my$i=exists$a{lazy}?$a{lazy}:!${$P.':N'};$i or ${$P.':E'}{$n}=$g and return$m;sub{$#_?$m->(@_):!exists$_[0]{$n}?$_[0]{$n}=$g->(@_):$m->(@_)}}};my$i=\&import;*{$M.import}=sub{(@_==2 and not$_[1])?pop@_:@_==1?push@_,grep!/import/,@f:();goto&$i};*{$M.'required::e'}=sub{my($P,$e,$o)=@_;$o->{required}=sub{my($m,$n,%a)=@_;if($a{required}){my$C=*{$P."new"}{CODE}||*{$M.Object::new}{CODE};no warnings 'redefine';*{$P."new"}=sub{my$s=$C->(@_);my%a=@_[1..$#_];if(!exists$a{$n}){require Carp;Carp::croak($n." required")}$s}}$m}};@f=qw[build builder default import required];use strict;use warnings;
+no warnings;my$M=__PACKAGE__.'::';*{$M.Object::new}=sub{my$c=shift;my$s=bless{@_},$c;my%n=%{$c.::.':E'};map{$s->{$_}=$n{$_}->()if!exists$s->{$_}}keys%n;$s};*{$M.import}=sub{import warnings;$^H|=1538;my($P,%e,%o)=caller.'::';shift;eval"no Mo::$_",&{$M.$_.::e}($P,\%e,\%o,\@_)for@_;return if$e{M};%e=(extends,sub{eval"no $_[0]()";@{$P.ISA}=$_[0]},has,sub{my$n=shift;my$m=sub{$#_?$_[0]{$n}=$_[1]:$_[0]{$n}};@_=(default,@_)if!($#_%2);$m=$o{$_}->($m,$n,@_)for sort keys%o;*{$P.$n}=$m},%e,);*{$P.$_}=$e{$_}for keys%e;@{$P.ISA}=$M.Object};*{$M.'builder::e'}=sub{my($P,$e,$o)=@_;$o->{builder}=sub{my($m,$n,%a)=@_;my$b=$a{builder}or return$m;my$i=exists$a{lazy}?$a{lazy}:!${$P.':N'};$i or ${$P.':E'}{$n}=\&{$P.$b}and return$m;sub{$#_?$m->(@_):!exists$_[0]{$n}?$_[0]{$n}=$_[0]->$b:$m->(@_)}}};*{$M.'default::e'}=sub{my($P,$e,$o)=@_;$o->{default}=sub{my($m,$n,%a)=@_;exists$a{default}or return$m;my($d,$r)=$a{default};my$g='HASH'eq($r=ref$d)?sub{+{%$d}}:'ARRAY'eq$r?sub{[@$d]}:'CODE'eq$r?$d:sub{$d};my$i=exists$a{lazy}?$a{lazy}:!${$P.':N'};$i or ${$P.':E'}{$n}=$g and return$m;sub{$#_?$m->(@_):!exists$_[0]{$n}?$_[0]{$n}=$g->(@_):$m->(@_)}}};my$i=\&import;*{$M.import}=sub{(@_==2 and not$_[1])?pop@_:@_==1?push@_,grep!/import/,@f:();goto&$i};*{$M.'required::e'}=sub{my($P,$e,$o)=@_;$o->{required}=sub{my($m,$n,%a)=@_;if($a{required}){my$C=*{$P."new"}{CODE}||*{$M.Object::new}{CODE};no warnings 'redefine';*{$P."new"}=sub{my$s=$C->(@_);my%a=@_[1..$#_];if(!exists$a{$n}){require Carp;Carp::croak($n." required")}$s}}$m}};@f=qw[builder default import required];use strict;use warnings;
     $INC{'Lock/Socket/Mo.pm'} = __FILE__;
 }
 1;
+#>>>
+
 package Lock::Socket::Error;
 use Lock::Socket::Mo;
 use overload '""' => sub { $_[0]->msg }, fallback => 1;
@@ -28,10 +30,48 @@ use Carp ();
 use Lock::Socket::Mo;
 use Socket;
 
-our @VERSION = '0.0.1_2';
+our @VERSION = '0.0.2';
 
 @Lock::Socket::Error::Bind::ISA   = ('Lock::Socket::Error');
 @Lock::Socket::Error::Socket::ISA = ('Lock::Socket::Error');
+
+sub import {
+    my $class  = shift;
+    my $caller = caller;
+    no strict 'refs';
+
+    foreach my $token (@_) {
+        if ( $token eq 'lock_socket' ) {
+            *{ $caller . '::lock_socket' } = sub {
+                my $port = shift || Carp::croak('usage: lock_socket($PORT)');
+                my $addr = shift;
+                my $sock = Lock::Socket->new(
+                    port => $port,
+                    defined $addr ? ( addr => $addr ) : (),
+                );
+                $sock->lock;
+                return $sock;
+            };
+        }
+        elsif ( $token eq 'try_lock_socket' ) {
+            *{ $caller . '::try_lock_socket' } = sub {
+                my $port = shift
+                  || Carp::croak('usage: try_lock_socket($PORT)');
+                my $addr = shift;
+                my $sock = Lock::Socket->new(
+                    port => $port,
+                    defined $addr ? ( addr => $addr ) : (),
+                );
+                $sock->try_lock;
+                return $sock if $sock->_is_locked;
+                return 0;
+              }
+        }
+        else {
+            Carp::croak 'not exported by Lock::Socket: ' . $token;
+        }
+    }
+}
 
 has port => (
     is       => 'ro',
@@ -45,9 +85,6 @@ has addr => (
     },
 );
 
-# Unset close-on-exec?
-# $^F = 10;
-
 has _inet_addr => (
     is      => 'ro',
     default => sub {
@@ -56,17 +93,17 @@ has _inet_addr => (
     },
 );
 
-has _sock => (
+has fh => (
     is      => 'ro',
     lazy    => 0,
-    builder => '_sock_builder',
+    builder => '_fh_builder',
 );
 
-sub _sock_builder {
+sub _fh_builder {
     my $self = shift;
-    socket( my $sock, PF_INET, SOCK_STREAM, getprotobyname('tcp') )
+    socket( my $fh, PF_INET, SOCK_STREAM, getprotobyname('tcp') )
       || Carp::croak( $self->err( 'Socket', "socket: $!" ) );
-    return $sock;
+    return $fh;
 }
 
 has _is_locked => (
@@ -76,8 +113,8 @@ has _is_locked => (
 );
 
 sub err {
-    my $self = shift;
-    my $class = 'Lock::Socket::Error::'.$_[0];
+    my $self  = shift;
+    my $class = 'Lock::Socket::Error::' . $_[0];
     return $class->new( msg => $_[1] );
 }
 
@@ -89,8 +126,8 @@ sub lock {
     my $self = shift;
     return 1 if $self->_is_locked;
 
-    bind( $self->_sock, pack_sockaddr_in( $self->port, $self->_inet_addr ) )
-      || Carp::croak( $self->err ( 'Bind', "bind: $!" ) );
+    bind( $self->fh, pack_sockaddr_in( $self->port, $self->_inet_addr ) )
+      || Carp::croak( $self->err( 'Bind', "bind: $!" ) );
 
     $self->_is_locked(1);
 }
@@ -103,30 +140,35 @@ sub try_lock {
 sub unlock {
     my $self = shift;
     return 1 unless $self->_is_locked;
-    close( $self->_sock );
-    $self->_sock($self->_sock_builder);
+    close( $self->fh );
+    $self->fh( $self->_fh_builder );
     $self->_is_locked(0);
     return 1;
 }
 
-sub DESTROY {
-    $_[0]->unlock;
-}
-
 1;
 
-
-
-
+__END__
 =head1 NAME
 
 Lock::Socket - application lock/mutex module based on sockets
 
 =head1 VERSION
 
-0.0.1_2 (2014-09-13) development release.
+0.0.2 (2014-09-13) development release.
 
 =head1 SYNOPSIS
+
+    ### Function API
+    use Lock::Socket qw/lock_socket try_lock_socket/;
+
+    # Raises exception if cannot lock
+    my $lock = lock_socket(15151);
+
+    # Or just return undef
+    my $lock2 = try_lock_socket(15151) or
+        die "handle your own error";
+
 
     ### Object API
     use Lock::Socket;
@@ -148,22 +190,16 @@ Lock::Socket - application lock/mutex module based on sockets
     eval { $sock2->lock }; # exception
 
     # But trying to get a lock is ok
-    my $status = $sock2->try_lock;
+    my $status = $sock2->try_lock;       # 0
+    my $same_status = $sock2->is_locked; # 0
+
+    # If you need the underlying filehandle
+    my $fh = $sock->fh;
 
     # You can manually unlock
     $sock->unlock;
     # ... or unlocking is automatic on scope exit
     undef $sock;
-
-    ### Function API
-    use Lock::Socket qw/lock_socket try_lock_socket/;
-
-    # Fails if cannot lock
-    my $lock = lock_socket(15151);
-
-    # Or just return undef
-    my $lock2 = try_lock_socket(15151) or
-        die "handle your own error";
 
 =head1 DESCRIPTION
 
@@ -173,15 +209,19 @@ time.  This module works by binding to a socket on a loopback (127/8)
 address/port combination, which the operating system conveniently
 restricts to a single process.
 
+Both C<lock_socket> and C<try_lock_socket> take a mandatory port number
+and an optional IP address as arguments, and return a B<Lock::Socket>
+object.  Objects are instantiated manually as follows:
+
     Lock::Socket->new(
         port => $PORT, # required
         addr => $ADDR, # defaults to 127.X.Y.1
     );
 
-For the constructor C<port> is required, and on most systems needs to
-be greater than 1024 unless you are running as root. If C<addr> is not
-given then it is calculated as follows, which provides automatic
-per-user namespacing up to a maximum user ID of 65536:
+On most systems the port number needs to be greater than 1024 unless
+you are running as root. If C<addr> is not given then it is calculated
+as follows, which provides automatic per-user namespacing up to a
+maximum user ID of 65536:
 
     Octet   Value
     ------  ------------------------------
@@ -190,16 +230,29 @@ per-user namespacing up to a maximum user ID of 65536:
     3       Second byte of user ID
     4       1
 
-If you want a system-wide namespace you can manually specify the
-address as well as the required port number.
+The calculated address can be read back from C<< $sock->addr >>.  If
+you want a system-wide namespace you can manually specify the address
+as well as the required port number.
 
 As soon as the B<Lock::Socket> object goes out of scope the port is
 closed and the lock can be obtained by someone else.
 
+If you want to keep holding onto a lock socket after a call to C<exec>
+(perhaps after forking) read about the C<$^F> variable in L<perlvar>,
+as you will probably have to set it to ensure the socket is not closed:
+
+    use List::Util qw/max/;
+    $^F = max($^F, $sock->fh->fileno);
+
 =head1 SEE ALSO
 
 There are many other locking modules available on CPAN, but most of
-them use some kind of file or flock-based locking with various issues.
+them use some kind of file or flock-based locking.
+
+=head1 BUGS
+
+At the moment all of the tests fail on FreeBSD systems. Anyone with a
+clue or a box to test with please get in touch.
 
 =head1 AUTHOR
 
